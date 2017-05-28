@@ -4,4 +4,4 @@
 
 A very simple boilerplate for fussy lazy web devs.
 
-[Demo](https://cdn.rawgit.com/paulbrzeski/kettlefish/master/index.html)
+[Demo](http://htmlpreview.github.io/?https://github.com/paulbrzeski/kettlefish/blob/master/index.html)

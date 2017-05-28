@@ -11,12 +11,14 @@
     "boilerplate"
   ],
   "scripts": {
-    "build": "pug content -P -o . -b . && stylus styles -o dist",
-    "css": "stylus styles -o dist -w",
-    "pug": "pug content -P -o . -b . -w",
+    "build": "pug src/pages -P -o . -b . && stylus src/styles -o dist",
+    "css": "stylus src/styles -o dist -w",
+    "pug": "pug src/pages -P -o . -b . -w",
     "rollup": "rollup -c -w",
     "dev-osx": "sudo http-server -p 80 -c-1 .",
-    "dev": "http-server -p 80 -c-1 ."
+    "dev": "http-server -p 80 -c-1 .",
+    "watch": "npm run css & npm run pug & npm run rollup & npm run dev",
+    "preinstall": "npm i -g http-server"
   },
   "author": "Paul Brzeski",
   "license": "MIT",
@@ -24,12 +26,10 @@
     "url": "https://github.com/paulbrzeski/kettlefish/issues"
   },
   "dependencies": {
-    "jeet": "^7.1.0",
     "pug": "^2.0.0-beta6",
     "stylus": "^0.54.5"
   },
   "devDependencies": {
-    "imaginary": "^0.1.12",
     "jstransformer-markdown": "^1.1.1",
     "pug-cli": "^1.0.0-alpha6",
     "rollup": "^0.36.4",

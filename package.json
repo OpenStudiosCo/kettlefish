@@ -19,6 +19,7 @@
     "dev": "http-server -p 80 -c-1 .",
     "watch": "npm run css & npm run pug & npm run rollup & npm run dev",
     "gs": "for i in ../*; do (cd $i && (echo $i; git status)); done",
+    "gsw": "for /D %i in (../*) do cd ../%i && (git status && git remote get-url origin)",
     "preinstall": "npm i -g http-server"
   },
   "author": "Paul Brzeski",

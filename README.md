@@ -12,10 +12,6 @@ Kettlefish is a very simple boilerplate for fussy lazy web devs.
   - The [templates](/src/templates) folder contains page layouts, scripts blocks, etc and the [pages](/src/pages) folder creates the HTML structure of the site at the root, this is why there's a rogue index.html file in this repository. 
 - [Stylus for CSS](http://stylus-lang.com/)
   - The [styles](/src/styles) folder compiles into CSS, as you'll note in the `css` script below, any files defined in `/src/styles` are compiled to CSS in `/dist`.
-- [Semantic UI](https://semantic-ui.com/) CSS and JS included
-  - A severely underrated UI framework that uses semantic class names, making it easy to use.
-- [Rollup](https://rollupjs.org/) 
-  - For ES2015, application development and compression.
 - Example sites for even faster site building (coming soon)
   - For now, I've re-implemented the Semantic UI homepage demo using Kettlefish - [demo here](http://htmlpreview.github.io/?https://github.com/paulbrzeski/kettlefish/blob/master/index.html).
 

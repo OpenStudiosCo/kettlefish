@@ -33,10 +33,6 @@
   },
   "devDependencies": {
     "jstransformer-markdown": "^1.1.1",
-    "pug-cli": "^1.0.0-alpha6",
-    "rollup": "^0.36.4",
-    "rollup-plugin-buble": "^0.14.0",
-    "rollup-plugin-uglify": "^1.0.1",
-    "rollup-watch": "^2.5.0"
+    "pug-cli": "^1.0.0-alpha6"
   }
 }

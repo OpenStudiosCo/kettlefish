@@ -2,9 +2,10 @@
 
 ![Kettlefish Logo](./src/lib/kettlefish.png)
 
-# What is this
-
+# Getting Started
 Kettlefish is a very simple boilerplate for fussy lazy web devs.
+
+[Demo](http://htmlpreview.github.io/?https://github.com/paulbrzeski/kettlefish/blob/master/index.html)
 
 # Features
 - Simple low maintenance configuration, works out of the box.
@@ -27,7 +28,6 @@ Kettlefish comes with a couple of handy scripts out of the box. They are bound t
     "build": "pug src/pages -P -o . -b . && stylus src/styles -o dist",
     "css": "stylus src/styles -o dist -w",
     "pug": "pug src/pages -P -o . -b . -w",
-    "rollup": "rollup -c -w",
     "dev-osx": "sudo http-server -p 80 -c-1 .",
     "dev": "http-server -p 80 -c-1 .",
     "watch": "npm run css & npm run pug & npm run rollup & npm run dev",

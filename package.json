@@ -16,7 +16,9 @@
     "rollup": "rollup -c",
     "dev-osx": "sudo http-server -p 80 -c-1 .",
     "dev": "http-server -p 80 -c-1 .",
-    "preinstall": "npm i -g http-server rollup"
+    "preinstall": "npm i -g http-server rollup",
+    "gs": "for i in ../*; do (cd $i && (echo $i; git status)); done",
+    "gsw": "for /D %i in (../*) do cd ../%i && (git remote get-url origin && git status)"
   },
   "author": "Paul Brzeski",
   "license": "MIT",
@@ -25,7 +27,7 @@
   },
   "dependencies": {
     "axis": "^1.0.0",
-    "npm": "^6.4.1",
+    "npm": "^6.9.0",
     "prompt": "^1.0.0",
     "pug": "^2.0.0-beta6",
     "stylus": "^0.54.5",

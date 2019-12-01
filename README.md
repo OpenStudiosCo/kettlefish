@@ -28,3 +28,18 @@ Out of the box, you can start a new site using this as a base - you'll have ever
 @TODO: Complete this section
 - Dev script / watch mode
 - Compiler / run once
+
+## Scripts
+Kettlefish comes with a couple of handy scripts out of the box. They are the basis for key tasks and bound to package.json which you are welcome to use as a starting point for your own project.	
+```	@TODO: Complete this section
+  "scripts": {	- Dev script / watch mode
+    "build": "pug src/pages -P -o . -b . && stylus src/styles -o dist",	- Compiler / run once
+    "css": "stylus src/styles -o dist -w",	
+    "pug": "pug src/pages -P -o . -b . -w",	
+    "dev-osx": "sudo http-server -p 80 -c-1 .",	
+    "dev": "http-server -p 80 -c-1 .",	
+    "watch": "npm run css & npm run pug & npm run rollup & npm run dev",	
+    "gs": "for i in ../*; do (cd $i && (echo $i; git status)); done",	
+    "preinstall": "npm i -g http-server"	
+  }	
+```

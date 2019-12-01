@@ -2,13 +2,17 @@
 
 'use strict';
 
+const path = require('path');
+
 console.log("Kettlefish global compiler, can be run anywhere.\nYou entered:");
 var target = process.argv[2] ? process.argv[2] : '.';
 var opts = Object.create(process.env);
 opts.execArgv = [target];
 
 const { spawn } = require('child_process');
-const build = spawn('node ' + process.argv[1] + '../../../dev.js');
+
+console.log('Running node ' + path.join(__dirname + '/../dev.js .'));
+const build = spawn('node ' + path.join(__dirname + '/../dev.js .'));
 
 build.stdout.on('data', (data) => {
   console.log(`stdout: ${data}`);

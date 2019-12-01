@@ -3,4 +3,21 @@
 'use strict';
 
 console.log("Kettlefish global compiler, can be run anywhere.\nYou entered:");
-console.log(process.argv);
+var target = process.argv[2] ? process.argv[2] : '.';
+var opts = Object.create(process.env);
+opts.execArgv = [target];
+
+const { spawn } = require('child_process');
+const build = spawn('node ' + process.argv[1] + '../../../dev.js');
+
+build.stdout.on('data', (data) => {
+  console.log(`stdout: ${data}`);
+});
+
+build.stderr.on('data', (data) => {
+  console.error(`stderr: ${data}`);
+});
+
+build.on('close', (code) => {
+  console.log(`child process exited with code ${code}`);
+});

@@ -5,14 +5,11 @@
 const spawn = require('cross-spawn');
 
 console.log("Kettlefish global compiler, can be run anywhere.\nYou entered:");
-var target = process.argv[2] ? process.argv[2] : '.';
-var opts = Object.create(process.env);
-opts.execArgv = [target];
 
 function run (script) {
   spawn('npm', ['run', script], { stdio: 'inherit' });
 }
 
-run('rollup');
 run('css');
 run('pug');
+run('rollup');

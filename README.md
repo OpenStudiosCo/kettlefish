@@ -9,6 +9,7 @@ Kettlefish is a very simple boilerplate for fussy lazy web devs.
 
 ## Features
 - Simple low maintenance configuration, works out of the box.
+- [Rollup](https://rollupjs.org/) for compiling front-end scripts
 - [Pug](https://pugjs.org/) for HTML.
   - The [templates](/src/templates) folder contains page layouts, scripts blocks, etc and the [pages](/src/pages) folder creates the HTML structure of the site at the root, this is why there's a rogue index.html file in this repository. 
 - [Stylus for CSS](http://stylus-lang.com/)
@@ -41,6 +42,7 @@ Kettlefish comes with a script that will watch for changes to Pug, Stylus and JS
 If you install Kettlefish globally, you can use it as a multipurpose static generator for things like project documentation or invoicing.
 
 The default target directory is the current folder, but a path argument can also be passed in.
+
 ```<kettlefish compatible folder root> kf .```
 ###### OR
 ```<kettlefish compatible folder root> kettlefish .```
@@ -59,3 +61,18 @@ Kettlefish comes with a couple of handy scripts out of the box. They are the bas
     "preinstall": "npm i -g http-server"	
   }	
 ```
+## Important files
+The following files are part of the Kettlefish compilation and templating system.
+
+Any of these default files can be customised for your requirements.
+### Required:
+- ```/package.json``` - scripts that Kettlefish uses.
+- ```/rollup.config.js``` - configuration for front-end Javascript compilation using Rollup.
+- ```/src/``` folder - templates and content that will be compiled by Kettlefish
+- ```/src/pages``` folder - Pug templates that represent the desired HTML structure. ```/src/pages/index.pug => /index.html```.
+
+### Optional:
+- ```/src/app.js``` - uses Rollup to compile a front-end script. ```/src/app.js => /dist/app.js```
+- ```/src/app/``` folder - additional Javascript code that can be imported to app.js using import or require patterns.
+- ```/src/styles``` folder - Stylus files that will compile to CSS. ```/src/styles/layout.styl => /dist/layout.css```
+- ```/src/templates``` - reusable Pug templates for use by pages defined in ```/src/pages```.

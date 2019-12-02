@@ -8,7 +8,7 @@ Kettlefish is a very simple boilerplate for fussy lazy web devs.
 [Demo](http://htmlpreview.github.io/?https://github.com/paulbrzeski/kettlefish/blob/master/index.html)
 
 ## Features
-- Simple low maintenance configuration, works out of the box.
+- Simple low maintenance configuration and CLI tool, works out of the box.
 - [Rollup](https://rollupjs.org/) for compiling front-end scripts
 - [Pug](https://pugjs.org/) for HTML.
   - The [templates](/src/templates) folder contains page layouts, scripts blocks, etc and the [pages](/src/pages) folder creates the HTML structure of the site at the root, this is why there's a rogue index.html file in this repository. 

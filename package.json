@@ -29,15 +29,15 @@
     "stylus": "^0.54.5",
     "vue": "^2.4.2"
   },
-  "scripts": {	
-    "css": "stylus src/styles -o dist",	
-    "pug": "pug src/pages -P -o . -b .",	
-    "rollup": "rollup -c",	
-    "dev-osx": "sudo http-server -p 80 -c-1 .",	
-    "dev": "http-server -p 80 -c-1 .",	
-    "preinstall": "npm i -g pug-cli stylus http-server rollup",	
-    "gs": "for i in ../*; do (cd $i && (echo $i; git status)); done",	
-    "gsw": "for /D %i in (../*) do cd ../%i && (git remote get-url origin && git status)"	
+  "scripts": {
+    "css": "stylus src/styles -o dist",
+    "pug": "pug src/pages -P -o . -b .",
+    "rollup": "rollup -c",
+    "dev-osx": "sudo http-server -p 80 -c-1 .",
+    "dev": "http-server -p 80 -c-1 .",
+    "preinstall": "npm i -g pug-cli stylus http-server rollup",
+    "gs": "for i in ../*; do (cd $i && (echo $i; git status)); done",
+    "gsw": "for /D %i in (../*) do cd ../%i && (git remote get-url origin && git status)"
   },
   "bin": {
     "kettlefish": "./bin/kettlefish",

@@ -3,11 +3,25 @@
 ![Kettlefish Logo](./src/lib/kettlefish.png)
 
 # Getting started
-Kettlefish is a very simple boilerplate for fussy lazy web devs.
+Kettlefish is an [Open Studios](https://openstudios.xyz) project that provides a very simple boilerplate for fussy lazy web dev.
 
-[Demo](http://htmlpreview.github.io/?https://github.com/paulbrzeski/kettlefish/blob/master/index.html)
+[Example Kettlefish Site](http://htmlpreview.github.io/?https://github.com/paulbrzeski/kettlefish/blob/master/index.html)
+
+The default templates and tools provided by the Kettlefish repository can be configured and extended for efficiently building websites and software with components tested through Open Studios' other projects including [Kamigen](https://kamigen.com/) and [Manifold](http://manifold.paulbrzeski.com/).
+
+## Installation
+Global install with NPM
+```
+npm install -g kettlefish
+```
+Local install with NPM  (for a project)
+```
+npm install kettlefish --save
+```
+
 
 ## Features
+If you're new to some of the features in the next section, have a look at the final section **References and Learning** 
 - Simple low maintenance configuration and CLI tool, works out of the box.
 - [Rollup](https://rollupjs.org/) for compiling front-end scripts
 - [Pug](https://pugjs.org/) for HTML.
@@ -17,15 +31,13 @@ Kettlefish is a very simple boilerplate for fussy lazy web devs.
 - Example sites for even faster site building (coming soon)
   - For now, I've re-implemented the Semantic UI homepage demo using Kettlefish - [demo here](http://htmlpreview.github.io/?https://github.com/paulbrzeski/kettlefish/blob/master/index.html).
 
+### Reference and tutorials
+- [Getting Started with Semantic UI](https://semantic-ui.com/introduction/getting-started.html)
+- [Pug (Jade) HTML preprocessor video tutorials](https://www.youtube.com/watch?v=AY99ODBchIA)
+- [Stylus CSS preprocessor video tutorials](https://www.youtube.com/watch?v=eJahtnmywMI)
+- [Rollup JS Configuration Guide](https://rollupjs.org/guide/en/#configuration-files)
 
-## Local or global installation
-Kettlefish can be installed globally so it can run from anywhere
-```
-npm install -g kettlefish
-```
 # Usage
-If you're aware of some or all of the buzzwords in the features list, you're going to have a good time with this boilerplate. If not, feel free to post issues asking how to do things unrelated to this project.
-
 Kettlefish is a multi purpose static site generator.
 
 Out of the box, you can start a new site using this as a base - you'll have everything you need to do anything. If you're a CMS developer, you can use this to implement a design first and then integrate it into your development pipeline.
@@ -76,3 +88,14 @@ Any of these default files can be customised for your requirements.
 - ```/src/app/``` folder - additional Javascript code that can be imported to app.js using import or require patterns.
 - ```/src/styles``` folder - Stylus files that will compile to CSS. ```/src/styles/layout.styl => /dist/layout.css```
 - ```/src/templates``` - reusable Pug templates for use by pages defined in ```/src/pages```.
+
+## Built with Kettlefish
+### Websites and Web Apps
+- [Kamigen](https://kamigen.com/)
+- [Langenium](http://langenium.paulbrzeski.com/)
+### Websites
+- [Open Studios](https://openstudios.xyz)
+- [Paul Brzeski Consulting](https://paulbrzeski.com)
+### Web Apps
+- [Manifold](http://manifold.paulbrzeski.com/)
+- [Rover](http://rover.paulbrzeski.com/)

@@ -1,6 +1,17 @@
-# kettlefish
-
 ![Kettlefish Logo](./src/lib/kettlefish.png)
+
+### Contents
+- [Getting Started](#getting-started)
+  - [Features](#features)
+  - [Installation](#installation)
+  - [References and tutorials](#references-and-tutorials)
+- [Usage](#usage)
+  - [As a boilerplate](#as-a-boilerplate)
+  - [Developing static sites](#developing-static-sites)
+  - [As a global CLI tool](#as-a-global-cli-tool)
+  - [Scripts](#scripts)
+  - [Important files](#important-files)
+- [Built with Kettlefish](#built-with-kettlefish)
 
 # Getting started
 Kettlefish is an [Open Studios](https://openstudios.xyz) project that provides a very simple boilerplate for fussy lazy web dev.
@@ -8,17 +19,6 @@ Kettlefish is an [Open Studios](https://openstudios.xyz) project that provides a
 [Example Kettlefish Site](http://htmlpreview.github.io/?https://github.com/paulbrzeski/kettlefish/blob/master/index.html)
 
 The default templates and tools provided by the Kettlefish repository can be configured and extended for efficiently building websites and software with components tested through Open Studios' other projects including [Kamigen](https://kamigen.com/) and [Manifold](http://manifold.paulbrzeski.com/).
-
-## Installation
-Global install with NPM
-```
-npm install -g kettlefish
-```
-Local install with NPM  (for a project)
-```
-npm install kettlefish --save
-```
-
 
 ## Features
 If you're new to some of the features in the next section, have a look at the final section **References and Learning** 
@@ -31,7 +31,17 @@ If you're new to some of the features in the next section, have a look at the fi
 - Example sites for even faster site building (coming soon)
   - For now, I've re-implemented the Semantic UI homepage demo using Kettlefish - [demo here](http://htmlpreview.github.io/?https://github.com/paulbrzeski/kettlefish/blob/master/index.html).
 
-### Reference and tutorials
+## Installation
+Global install with NPM
+```
+npm install -g kettlefish
+```
+Local install with NPM  (for a project)
+```
+npm install kettlefish --save
+```
+
+## References and tutorials
 - [Getting Started with Semantic UI](https://semantic-ui.com/introduction/getting-started.html)
 - [Pug (Jade) HTML preprocessor video tutorials](https://www.youtube.com/watch?v=AY99ODBchIA)
 - [Stylus CSS preprocessor video tutorials](https://www.youtube.com/watch?v=eJahtnmywMI)
@@ -89,13 +99,13 @@ Any of these default files can be customised for your requirements.
 - ```/src/styles``` folder - Stylus files that will compile to CSS. ```/src/styles/layout.styl => /dist/layout.css```
 - ```/src/templates``` - reusable Pug templates for use by pages defined in ```/src/pages```.
 
-## Built with Kettlefish
-### Websites and Web Apps
+# Built with Kettlefish
+## Websites and Web Apps
 - [Kamigen](https://kamigen.com/)
 - [Langenium](http://langenium.paulbrzeski.com/)
-### Websites
+## Websites
 - [Open Studios](https://openstudios.xyz)
 - [Paul Brzeski Consulting](https://paulbrzeski.com)
-### Web Apps
+## Web Apps
 - [Manifold](http://manifold.paulbrzeski.com/)
 - [Rover](http://rover.paulbrzeski.com/)

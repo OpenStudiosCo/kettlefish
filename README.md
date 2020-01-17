@@ -20,6 +20,9 @@ Kettlefish is an [Open Studios](https://openstudios.xyz) project that provides a
 
 The default templates and tools provided by the Kettlefish repository can be configured and extended for efficiently building websites and software with components tested through Open Studios' other projects including [Kamigen](https://kamigen.com/) and [Manifold](http://manifold.paulbrzeski.com/).
 
+This project needs [your support](https://openstudios.xyz/donate.html)!
+
+
 ## Features
 If you're new to some of the features in the next section, have a look at the final section **References and Learning** 
 - Simple low maintenance configuration and CLI tool, works out of the box.

@@ -1,6 +1,6 @@
 {
   "name": "kettlefish",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A Node.JS based boilerplate for no fuss static HTML websites",
   "main": "kettlefish.js",
   "repository": {

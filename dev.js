@@ -14,7 +14,7 @@ run('pug');
 chokidar.watch('src', {ignored: /(^|[\/\\])\../}).on('all', (event, path) => {
   if (event === 'change') {
     console.log(event, path);
-    if (path.endsWith('.js') && path.contains('client')) {
+    if (path.endsWith('.js')) {
       run('rollup');
     }
 

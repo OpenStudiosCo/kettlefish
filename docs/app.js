@@ -1,5 +1,8 @@
 'use strict';
 
+var socket = io('http://localhost:42069');
+
+console.log(socket);
 $(document)
   .ready(function() {
 

@@ -2,7 +2,9 @@
 
 var socket = io('http://localhost:42069');
 
-console.log(socket);
+socket.on('ping', function (data) {
+  console.log(data);
+});
 $(document)
   .ready(function() {
 

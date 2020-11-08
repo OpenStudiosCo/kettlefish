@@ -1,7 +1,7 @@
+// test
 const server = require('http').createServer();
 
 const io = require('socket.io')(server, {
-  // below are engine.IO options
   pingInterval: 10000,
   pingTimeout: 5000,
   cookie: false,
@@ -11,7 +11,7 @@ const io = require('socket.io')(server, {
 
 io.on('connection', function(socket){
   console.log('is connected');
+  socket.emit('ping', 'bla bla bla');
 });
-
 
 server.listen(42069);

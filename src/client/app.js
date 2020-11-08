@@ -1,6 +1,8 @@
 const socket = io('http://localhost:42069');
 
-console.log(socket);
+socket.on('ping', (data) => {
+  console.log(data);
+});
 $(document)
   .ready(function() {
 

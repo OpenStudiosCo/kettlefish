@@ -25,6 +25,11 @@ chokidar.watch('src', {ignored: /(^|[\/\\])\../}).on('all', (event, path) => {
     if (path.endsWith('.pug')) {
       run('pug');
     }
+
+    if (path.endsWith('server.js')) {
+      console.log('Server code modified, exiting');
+      process.exit();
+    }
   }
 });
 

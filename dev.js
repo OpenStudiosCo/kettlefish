@@ -14,7 +14,7 @@ run('pug');
 chokidar.watch('src', {ignored: /(^|[\/\\])\../}).on('all', (event, path) => {
   if (event === 'change') {
     console.log(event, path);
-    if (path.endsWith('.js')) {
+    if (path.endsWith('.js') && path.contains('client')) {
       run('rollup');
     }
 
@@ -27,3 +27,6 @@ chokidar.watch('src', {ignored: /(^|[\/\\])\../}).on('all', (event, path) => {
     }
   }
 });
+
+// Load the server application
+require('child_process').fork('./src/server/server.js');

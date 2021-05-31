@@ -1,0 +1,35 @@
+doctype html
+html
+  head
+    title
+      block title
+      |  | Gamer Loot, Perth Western Australia.
+    base(href='/')
+    meta(name='viewport' content='width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0')
+    <?php wp_head(); ?>
+    link(href='//cdn.jsdelivr.net/npm/fomantic-ui@2.8.7/dist/semantic.min.css', rel='stylesheet')
+    link(href='//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.css' rel='stylesheet' type='text/css' )
+    link(href="${dir}/style.css" rel='stylesheet')
+  body#site(class=$body_classes itemscope="" itemtype=$page_schema)
+    #mobile_menu.ui.right.overlay.sidebar.inverted.vertical.menu(itemscope itemtype="https://schema.org/BreadcrumbList")
+      each $item in $header_menu
+        a.item(href=$item->url title=$item->title itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem")
+          i.icon(class=$item->classes)
+          if ($item->title == 'Cart')
+            span(itemprop="name") Cart
+          if ($item->title == 'Account')
+            if (is_user_logged_in())
+              span(itemprop="name")= $item->title
+            else
+              span(itemprop="name") Login
+      each $item in $main_menu
+        a.item(href=$item->url itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem")
+          i.icon(class=$item->classes)
+          span(itemprop="name")= $item->title
+      img.ui.large.image(alt='Gamer Loot logo' src='/wp-content/themes/gamerloot/product.png' style="opacity: 0.5; position: absolute; bottom: 0")
+    .ui.pusher
+      include header.pug
+      block page
+      include footer.pug
+    <?php wp_footer(); ?>
+  include scripts.pug

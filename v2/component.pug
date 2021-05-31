@@ -1,0 +1,57 @@
+inputs
+  - images = []
+
+outputs
+  kettlefish.compile(template)
+
+block append component_styles
+  
+ 
+block append component_scripts
+  $(document).ready(function(){});
+
+template
+  span(itemscope itemtype="https://schema.org/Product")
+  a(href="${link}")
+    h2(itemprop="name")= $title
+  .ui.grid
+    .row
+      .column.six.wide.product_image_gallery
+        .selected_image
+          - let first_image = true
+          each $image_url in $images['full']
+            if first_image
+              img.ui.image.fluid(src=$image_url alt='Product image, click to view fullscreen' itemprop="image")
+              - first_image = false
+            else
+              img.ui.image.fluid.lazyload(src='/wp-content/themes/gamerloot/product.png' data-src=$image_url alt='Product image, click to view fullscreen' itemprop="image")
+        .images.ui.secondary.menu
+          each $image_url in $images['thumb']
+            img.ui.image.fluid.lazyload(src='/wp-content/themes/gamerloot/product.png' data-src=$image_url alt='Product thumbnail, click to select' itemprop="image")
+      .column.ten.wide
+        div(style="margin-bottom: 1rem;" itemprop="description")= $description
+        span(itemprop="offers" itemscope itemtype="https://schema.org/Offer")
+          meta(itemprop="availability" href="https://schema.org/InStock")
+          if (method_exists($product, 'get_available_variations'))
+            | FROM
+          .ui.huge.inverted.header.gl-gold-text(style="margin-top:0;")
+            span(itemprop="priceCurrency" content="AUD") $
+            - $price = number_format($product->get_price(), 2, '.', '')
+            span(itemprop="price" content=$price)!= $price
+          - $add_to_cart_action = esc_url( apply_filters( 'woocommerce_add_to_cart_form_action', $product->get_permalink() ) )
+          - $product_id = $product->get_id()
+          form.ui.form(class="cart" action!="$add_to_cart_action" method="post" enctype='multipart/form-data')
+            if (method_exists($product, 'get_available_variations'))
+              .two.fields
+                .field
+                  a.ui.icon.fluid.green.button.variant_add_to_cart_button(href=$link)
+                    i.cart.plus.icon
+                .field
+            else
+              .two.fields
+                .field
+                  button.ui.icon.fluid.green.button.single_add_to_cart_button(type="submit" name="add-to-cart" value!="$product_id")
+                    i.cart.plus.icon
+                .field
+                  a.ui.icon.fluid.red.button(href!="/checkout/?add-to-cart=$product_id")
+                    i.cart.plus.icon

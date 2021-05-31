@@ -1,7 +1,7 @@
 extends /src/templates/layout.pug
 
 block append scripts
-  script(src='./dist/app.js')
+  script(src='./app.js')
 
 block append title
   | Homepage | Made in Kettlefish (https://github.com/paulbrzeski/kettlefish)
@@ -34,7 +34,7 @@ block append page
             h3.ui.header We Make Bananas That Can Dance
             p Yes that's right, you thought it was the stuff of dreams, but even bananas can be bioengineered.
           .six.wide.right.floated.column
-            img.ui.large.bordered.rounded.image(src="./src/lib/kettlefish.png")
+            img.ui.large.bordered.rounded.image(src="./assets/kettlefish.png")
         .row
           .center.aligned.column
             a.ui.huge.button Check Them Out
@@ -47,7 +47,7 @@ block append page
           .column
             h3 "I shouldn't have gone with their competitor."
             p
-              img.ui.avatar.image(src="./src/lib/kettlefish.png")
+              img.ui.avatar.image(src="./assets/kettlefish.png")
               b Nan
               | Chief Fun Officer Acme Toys
     .ui.vertical.stripe.segment

@@ -1,4 +1,4 @@
-![Kettlefish Logo](./src/lib/kettlefish.png)
+![Kettlefish Logo](./docs/assets/kettlefish.png)
 
 ### Contents
 - [Getting Started](#getting-started)

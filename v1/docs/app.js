@@ -1,6 +1,8 @@
-const socket = io('http://localhost:42069');
+'use strict';
 
-socket.on('ping', (data) => {
+var socket = io('http://localhost:42069');
+
+socket.on('ping', function (data) {
   console.log(data);
 });
 $(document)
